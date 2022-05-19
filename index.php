@@ -1,6 +1,8 @@
 <?php
 $text = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.';
-var_dump($text)
+$length = strlen($text);
+$wordCensored = $_GET['word'];
+$replaceWord = str_replace($wordCensored, '***', $text);
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +16,11 @@ var_dump($text)
 </head>
 
 <body>
-    <p><?php echo $text; ?></p>
+
+    <h2> Text: <?php echo $text; ?></h2>
+    <h2> Length: <?php echo $length; ?> </h2>
+    <h2> Text censored: <?php echo $replaceWord; ?> </h2>
+
 </body>
 
 </html>
